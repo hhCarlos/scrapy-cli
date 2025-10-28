@@ -39,3 +39,7 @@ Each entry must include at least one flag and a concise description of the chang
 ## 📅 2025-10-27 — `branch: feat/valid-url-request`
 
 - **feature:** Ask the user in terminal for the URL and validate it.  
+
+## 📅 2025-10-27 — `branch: ci/workflows`
+
+- **ci:** Added `pytest` configuration to clean __pycache__.

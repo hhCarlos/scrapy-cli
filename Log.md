@@ -31,3 +31,7 @@ Each entry must include at least one flag and a concise description of the chang
 - **ci:** Added `.flake8` configuration and local testing.  
 - **update:** Connected GitHub repo and created `develop` branch.
 
+## 📅 2025-10-27 — `branch: ci/workflows`
+
+- **feature:** Pytest and linter added as well in the pipeline.  
+- **ci:** Added `pytest` and configuration per document in /workflows.

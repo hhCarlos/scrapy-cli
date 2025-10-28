@@ -11,7 +11,6 @@ class Scraper:
     """Main entry point for scrapper process"""
     self.collect_selectors()
     print(f"✅ Selectors collected: {self.selectors}")
-    
 
   def collect_selectors(self):
     """Interactively collect CSS selectors from user."""

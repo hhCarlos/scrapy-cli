@@ -12,3 +12,8 @@ A simple CLI tool for web scraping using Python.
 ```bash
 pip install -r requirements.txt
 python src/main.py
+
+## Utilities
+
+Command to eleminate cache from test:
+- find . -type d -name "__pycache__" -exec rm -r {} +

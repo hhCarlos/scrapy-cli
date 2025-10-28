@@ -4,22 +4,12 @@ on:
   push:
     branches: [ ci/workflows ]
   pull_request:
-    branches: [ ci/workflows ]
+    branches: [ develop, ci/workflows ]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  call-linter:
+    uses: ./.github/workflows/linter.yml
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
+  call-build:
+    uses: ./.github/workflows/build.yml
+    needs: call-linter

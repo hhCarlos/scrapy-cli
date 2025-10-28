@@ -7,9 +7,13 @@ on:
     branches: [ develop, ci/workflows ]
 
 jobs:
-  call-linter:
+  linter:
     uses: ./.github/workflows/linter.yml
 
-  call-build:
+  tests:
+    uses: ./.github/workflows/tests.yml
+    needs: linter
+
+  build:
     uses: ./.github/workflows/build.yml
-    needs: call-linter
+    needs: tests

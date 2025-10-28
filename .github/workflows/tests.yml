@@ -24,7 +24,7 @@ jobs:
       - name: Clean pycache
         run: |
           echo "🧹 Cleaning __pycache__ folders..."
-          ind . -type d -name "__pycache__" -exec rm -r {} +
+          find . -type d -name "__pycache__" -exec rm -r {} +
 
       - name: Run Pytest
         run: pytest -v

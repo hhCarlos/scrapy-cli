@@ -43,3 +43,7 @@ Each entry must include at least one flag and a concise description of the chang
 ## 📅 2025-10-27 — `branch: ci/workflows`
 
 - **ci:** Added `pytest` configuration to clean __pycache__.
+
+## 📅 2025-10-27 — `branch: feat/scrapper-class-and-implementation`
+
+- **feature:** Scraper was change to a class and changes in main to call Scraper as a class.  

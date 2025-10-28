@@ -1,18 +1,16 @@
 from utils.validators import is_valid_url
-from scraper import start_scraper
+from scraper import Scraper
 
 
 def main():
-  try:
-    url = input("Enter a URL: ").strip()
-    if not is_valid_url(url):
-      print("Invalid URL. Exiting...")
-      return
-    print(f"URL accepted: {url}")
-    start_scraper(url)
-  except KeyboardInterrupt:
-    print("Process interrupted. Exiting...")
+  url = input("Enter a valid URL: ").strip()
+  if not is_valid_url(url):
+    print("Invalid url. Exiting...")
+    return
+
+  scraper = Scraper(url)
+  scraper.start()
 
 
-if __name__ == "__mian__":
+if __name__ == "__main__":
   main()

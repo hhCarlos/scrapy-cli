@@ -1,15 +1,20 @@
 import sys
 import os
 
-# Force Python to see directory: src/
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../src")))
+# ✅ Ensure Python can import from src/
+CURRENT_DIR = os.path.dirname(__file__)
+SRC_PATH = os.path.abspath(os.path.join(CURRENT_DIR, "../src"))
+if SRC_PATH not in sys.path:
+    sys.path.insert(0, SRC_PATH)
 
-from scraper import start_scraper
+from scraper import Scraper
 
 
-def test_start_scraper_output(capfd):
-    """Should print the correct starting message."""
+def test_scraper_initial_state():
+    """Should initialize with correct URL and empty selectors list."""
     url = "https://example.com"
-    start_scraper(url)
-    out, _ = capfd.readouterr()
-    assert f"Starting scrape on: {url}" in out
+    scraper = Scraper(url)
+
+    # Verifica estado inicial
+    assert scraper.url == url
+    assert scraper.selectors == []

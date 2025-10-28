@@ -2,7 +2,7 @@ name: Python CI
 
 on:
   push:
-    branches: [ ci/workflows ]
+    branches: [ develop, ci/workflows ]
   pull_request:
     branches: [ develop, ci/workflows ]
 

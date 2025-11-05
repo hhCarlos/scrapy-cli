@@ -47,3 +47,7 @@ Each entry must include at least one flag and a concise description of the chang
 ## 📅 2025-10-27 — `branch: feat/scrapper-class-and-implementation`
 
 - **feature:** Scraper was change to a class and changes in main to call Scraper as a class.  
+
+## 📅 2025-11-4 — `branch: feat/scrapper-request`
+
+- **feature:** Libraries added pip install requests beautifulsoup4 in order to make the request and look for selectors added.

@@ -1,15 +1,12 @@
-from utils.validators import is_valid_url
-from scraper import Scraper
+from menus.main_menu import handle_selection, show_menu
 
 
 def main():
-  url = input("Enter a valid URL: ").strip()
-  if not is_valid_url(url):
-    print("Invalid url. Exiting...")
-    return
-
-  scraper = Scraper(url)
-  scraper.start()
+  running = True
+  while running:
+    show_menu()
+    option = input("Select an option (1-3): ")
+    running = handle_selection(option)
 
 
 if __name__ == "__main__":

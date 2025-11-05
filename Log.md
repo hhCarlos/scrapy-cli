@@ -51,3 +51,10 @@ Each entry must include at least one flag and a concise description of the chang
 ## 📅 2025-11-4 — `branch: feat/scrapper-request`
 
 - **feature:** Libraries added pip install requests beautifulsoup4 in order to make the request and look for selectors added.
+
+## 📅 2025-11-4 — `branch: feat/flujo-app-salida-y-browser`
+
+- **feature:** we added two options to main menu, the app knows has three options:
+1 Look for elements CLI -> Fast and easy for quick checks
+2 Look for elements browser -> Interactive work with browser
+3 Exit app
